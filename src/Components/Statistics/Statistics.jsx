@@ -1,6 +1,7 @@
 import React from 'react';
 import StatisticsItem from './StatisticsItem/StatisticsItem';
 import { Container, Heading, List } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ stats, title }) => {
 	return (
@@ -13,6 +14,11 @@ const Statistics = ({ stats, title }) => {
 			</List>
 		</Container>
 	);
+};
+
+Statistics.propTypes = {
+	title: PropTypes.string.isRequired,
+	stats: PropTypes.array.isRequired,
 };
 
 export default Statistics;
